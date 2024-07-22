@@ -110,7 +110,7 @@ const routes = [
     {
         path: '/admin/login',
         name: 'admin-login',
-        meta: {title: 'Geek-AI 控制台登录'},
+        meta: {title: '薯瓜-AI 控制台登录'},
         component: () => import('@/views/admin/Login.vue'),
     },
     {
@@ -118,7 +118,7 @@ const routes = [
         path: '/admin',
         redirect: '/admin/dashboard',
         component: () => import("@/views/admin/Home.vue"),
-        meta: {title: 'Geek-AI 控制台'},
+        meta: {title: '薯瓜-AI 控制台'},
         children: [
             {
                 path: '/admin/dashboard',
@@ -211,7 +211,7 @@ const routes = [
     {
         name: 'mobile',
         path: '/mobile',
-        meta: {title: 'Geek-AI v4.0'},
+        meta: {title: '薯瓜-AI v2.0'},
         component: () => import('@/views/mobile/Home.vue'),
         redirect: '/mobile/index',
         children: [

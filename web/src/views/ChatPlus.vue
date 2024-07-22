@@ -183,20 +183,7 @@
       </el-main>
     </el-container>
 
-    <el-dialog
-        v-model="showNotice"
-        :show-close="true"
-        class="notice-dialog"
-        title="网站公告"
-    >
-      <div class="notice">
-        <div v-html="notice"></div>
-
-        <p style="text-align: right">
-          <el-button @click="notShow" type="success" plain>我知道了，不再显示</el-button>
-        </p>
-      </div>
-    </el-dialog>
+   
   </div>
 
 

@@ -153,9 +153,7 @@
           <el-result icon="error" title="注册功能已关闭">
             <template #sub-title>
               <p>抱歉，系统已关闭注册功能，请联系管理员添加账号！</p>
-              <div class="wechat-card">
-                <el-image :src="wxImg"/>
-              </div>
+              
             </template>
           </el-result>
         </div>
@@ -183,7 +181,7 @@ import {validateEmail, validateMobile} from "@/utils/validate";
 import {showMessageError, showMessageOK} from "@/utils/dialog";
 
 const router = useRouter();
-const title = ref('Geek-AI 用户注册');
+const title = ref('薯瓜-AI 用户注册');
 const logo = ref("/images/logo")
 const data = ref({
   username: '',

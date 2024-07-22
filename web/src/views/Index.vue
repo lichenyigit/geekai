@@ -33,11 +33,6 @@
         <i class="iconfont icon-sd"></i>
         <span>SD 绘画</span>
       </el-button>
-      <!-- <el-button @click="router.push('/xmind')" color="#FFFD55" style="color:#424282" :dark="false">
-        <i class="iconfont icon-xmind"></i>
-        <span>思维导图</span>
-      </el-button> -->
-      <!--      <div id="animation-container"></div>-->
     </div>
 
     <div class="footer">
@@ -62,15 +57,15 @@ if (isMobile()) {
   router.push("/mobile")
 }
 
-const title = ref("Geek-AI 创作系统")
+const title = ref("薯瓜AI 创作系统")
 const logo = ref("/images/logo.png")
-const slogan = ref("我辈之人，先干为敬，陪您先把 AI 用起来")
+const slogan = ref("先把 AI 用起来")
 // const size = Math.max(window.innerWidth * 0.5, window.innerHeight * 0.8)
 const winHeight = window.innerHeight - 150
 
 onMounted(() => {
   httpGet("/api/config/get?key=system").then(res => {
-    title.value = res.data.title
+    //title.value = res.data.title
     logo.value = res.data.logo
   }).catch(e => {
     ElMessage.error("获取系统配置失败：" + e.message)

@@ -163,8 +163,8 @@ import bus from '@/store/eventbus'
 import {getMobileTheme} from "@/store/system";
 
 const form = ref({
-  username: 'GeekMaster',
-  nickname: '极客学长@001',
+  username: 'ShuguaMaster',
+  nickname: 'shugua@001',
   mobile: '1300000000',
   avatar: '',
   power: 0,
