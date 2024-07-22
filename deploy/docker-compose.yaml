@@ -73,7 +73,7 @@ services:
 
   # 前端应用
   geekai-web:
-    image: registry.cn-shenzhen.aliyuncs.com/geekmaster/geekai-web:v4.0.7-amd64
+    image: geekai-web:1.0.0
     container_name: geekai-web
     restart: always
     depends_on:
