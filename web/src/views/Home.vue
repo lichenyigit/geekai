@@ -12,25 +12,7 @@
 
       <div class="navbar">
 
-        <el-tooltip
-            class="box-item"
-            effect="light"
-            content="部署文档"
-            placement="bottom">
-          <a href="https://ai.r9it.com/docs/install/" class="link-button" target="_blank">
-            <i class="iconfont icon-book"></i>
-          </a>
-        </el-tooltip>
-
-        <el-tooltip
-            class="box-item"
-            effect="light"
-            content="项目源码"
-            placement="bottom">
-          <a href="https://github.com/yangjian102621/chatgpt-plus" class="link-button" target="_blank">
-            <i class="iconfont icon-github"></i>
-          </a>
-        </el-tooltip>
+        
 
         <el-dropdown :hide-on-click="true" class="user-info" trigger="click" v-if="loginUser.id">
                         <span class="el-dropdown-link">
