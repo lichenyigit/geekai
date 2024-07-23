@@ -69,6 +69,16 @@ CREATE TABLE `chatgpt_api_keys` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='OpenAI API ';
+/*
+-- Query: SELECT * FROM chatgpt_plus.chatgpt_api_keys
+LIMIT 0, 1000
+
+-- Date: 2024-07-23 16:06
+*/
+INSERT INTO `chatgpt_api_keys` (`id`,`platform`,`name`,`value`,`type`,`last_used_at`,`api_url`,`enabled`,`proxy_url`,`created_at`,`updated_at`) VALUES (1,'QWen','通义千问GPT','sk-a34d6938595d4b17bec257a02791747e','chat',1721721499,'https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation',1,'','2024-07-22 13:21:21','2024-07-22 13:23:30');
+INSERT INTO `chatgpt_api_keys` (`id`,`platform`,`name`,`value`,`type`,`last_used_at`,`api_url`,`enabled`,`proxy_url`,`created_at`,`updated_at`) VALUES (2,'ChatGLM','清华智普','d24ec326fac5c283eb5d596f8e2ed569.fFuam6zMsz16zKtm','chat',1721721527,'https://open.bigmodel.cn/api/paas/v3/model-api/{model}/sse-invoke',1,'','2024-07-23 08:59:27','2024-07-23 15:58:42');
+INSERT INTO `chatgpt_api_keys` (`id`,`platform`,`name`,`value`,`type`,`last_used_at`,`api_url`,`enabled`,`proxy_url`,`created_at`,`updated_at`) VALUES (3,'Baidu','百度','mHpsh6df34NlHrT2w80tgwVC|C8utSGUXSzLXek7IWIkBIzF3cSONmAXD','chat',1721721464,'https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat/{model}',1,'','2024-07-23 15:55:54','2024-07-23 15:55:54');
+
 
 -- --------------------------------------------------------
 
@@ -222,7 +232,7 @@ CREATE TABLE `chatgpt_configs` (
 INSERT INTO `chatgpt_configs` (`id`, `marker`, `config_json`) VALUES
 (1, 'system', '{\"title\":\"薯瓜AI 创作系统\",\"admin_title\":\"薯瓜AI 控制台\",\"logo\":\"/images/logo.png\",\"init_power\":100,\"daily_power\":10,\"invite_power\":10,\"vip_month_power\":1000,\"register_ways\":[\"username\",\"mobile\",\"email\"],\"enabled_register\":true,\"reward_img\":\"/images/wechat-pay.png\",\"enabled_reward\":true,\"power_price\":0.1,\"order_pay_timeout\":1800,\"vip_info_text\":\"月度会员，年度会员每月赠送 1000 点算力，赠送算力当月有效当月没有消费完的算力不结余到下个月。 点卡充值的算力长期有效。\",\"default_models\":[1,12,3],\"mj_power\":20,\"mj_action_power\":10,\"sd_power\":5,\"dall_power\":15,\"wechat_card_url\":\"/images/wx.png\",\"enable_context\":true,\"context_deep\":4,\"sd_neg_prompt\":\"(worst quality:2), (low quality:2), (normal quality:2), lowres, ((monochrome)), ((grayscale)), bad anatomy,DeepNegative, skin spots, acnes, skin blemishes,(fat:1.2),facing away, looking away,tilted head, lowres,bad anatomy,bad hands, missing fingers,extra digit, fewer digits,bad feet,poorly drawn hands,poorly drawn face,mutation,deformed,extra fingers,extra limbs,extra arms,extra legs,malformed limbs,fused fingers,too many fingers,long neck,cross-eyed,mutated hands,polar lowres,bad body,bad proportions,gross proportions,missing arms,missing legs,extra digit, extra arms, extra leg, extra foot,teethcroppe,signature, watermark, username,blurry,cropped,jpeg artifacts,text,error\"}'),
 (2, 'chat', '{\"azure\":{\"api_url\":\"https://chat-bot-api.openai.azure.com/openai/deployments/{model}/chat/completions?api-version=2023-05-15\",\"max_tokens\":1024,\"temperature\":1},\"baidu\":{\"api_url\":\"https://aip.baidubce.com/rpc/2.0/ai_custom/v1/wenxinworkshop/chat/{model}\",\"max_tokens\":1024,\"temperature\":0.95},\"chat_gml\":{\"api_url\":\"https://open.bigmodel.cn/api/paas/v3/model-api/{model}/sse-invoke\",\"max_tokens\":1024,\"temperature\":0.95},\"context_deep\":4,\"dall_api_url\":\"http://89.117.18.9:8001/v1/images/generations\",\"dall_img_num\":1,\"enable_context\":true,\"enable_history\":true,\"open_ai\":{\"api_url\":\"http://89.117.18.9:8001/v1/chat/completions\",\"max_tokens\":1024,\"temperature\":1},\"xun_fei\":{\"api_url\":\"wss://spark-api.xf-yun.com/{version}/chat\",\"max_tokens\":1024,\"temperature\":0.5}}'),
-(3, 'notice', '{\"sd_neg_prompt\":\"\",\"content\":\"## v4.0.7 更新日志\\n\\n* 功能优化：添加导航菜单的时候支持框入外部链接，并支持上传自定义菜单图片\\n* Bug修复：修复弹窗等于图形验证码一直验证失败的问题\\n* 功能重构：重构前端 UI 页面，增加顶部导航\\n* 功能优化：优化 Vue 非父子组件之间的通信方式\\n* 功能优化：优化 ItemList 组件，自动根据页面宽度计算 cols 数量\\n\\n注意：当前站点仅为开源项目 \\u003ca style=\\\"color: #F56C6C\\\" href=\\\"https://github.com/yangjian102621/chatgpt-plus\\\" target=\\\"_blank\\\"\\u003eChatPlus\\u003c/a\\u003e 的演示项目，本项目单纯就是给大家体验项目功能使用。\\n\\u003cstrong style=\\\"color: #F56C6C\\\"\\u003e体验额度用完之后请不要在当前站点进行任何充值操作！！！\\u003c/strong\\u003e\\n\\u003cstrong style=\\\"color: #F56C6C\\\"\\u003e体验额度用完之后请不要在当前站点进行任何充值操作！！！\\u003c/strong\\u003e\\n\\u003cstrong style=\\\"color: #F56C6C\\\"\\u003e体验额度用完之后请不要在当前站点进行任何充值操作！！！\\u003c/strong\\u003e\\n 如果觉得好用你就花几分钟自己部署一套，没有API KEY 的同学可以去下面几个推荐的中转站购买：\\n1. \\u003ca href=\\\"https://api.chat-plus.net\\\" target=\\\"_blank\\\"\\n   style=\\\"font-size: 20px;color:#F56C6C\\\"\\u003ehttps://api.chat-plus.net\\u003c/a\\u003e\\n2. \\u003ca href=\\\"https://api.薯瓜AI.me\\\" target=\\\"_blank\\\"\\n   style=\\\"font-size: 20px;color:#F56C6C\\\"\\u003ehttps://api.薯瓜AI.me\\u003c/a\\u003e\\n3. \\u003ca href=\\\"https://gpt.bemore.lol\\\" target=\\\"_blank\\\"\\n   style=\\\"font-size: 20px;color:#F56C6C\\\"\\u003ehttps://gpt.bemore.lol\\u003c/a\\u003e\\n\\n支持MidJourney，GPT，Claude，Google Gemmi，以及国内各个厂家的大模型，现在有超级优惠，价格远低于 OpenAI 官方。关于中转 API 的优势和劣势请参考 [中转API技术原理](https://ai.r9it.com/docs/install/errors-handle.html#%E8%B0%83%E7%94%A8%E4%B8%AD%E8%BD%AC-api-%E6%8A%A5%E9%94%99%E6%97%A0%E5%8F%AF%E7%94%A8%E6%B8%A0%E9%81%93)。GPT-3.5，GPT-4，DALL-E3 绘图......你都可以随意使用，无需魔法。\\n接入教程： \\u003ca href=\\\"https://ai.r9it.com/docs/install/\\\" target=\\\"_blank\\\"\\n             style=\\\"font-size: 20px;color:#F56C6C\\\"\\u003ehttps://ai.r9it.com/docs/install/\\u003c/a\\u003e\\n本项目源码地址：\\u003ca href=\\\"https://github.com/yangjian102621/chatgpt-plus\\\" target=\\\"_blank\\\"\\u003ehttps://github.com/yangjian102621/chatgpt-plus\\u003c/a\\u003e\",\"updated\":true}');
+(3, 'notice', '{\"sd_neg_prompt\":\"\",\"content\":\"\",\"updated\":true}');
 
 -- --------------------------------------------------------
 
@@ -349,13 +359,7 @@ INSERT INTO `chatgpt_menus` (`id`, `name`, `icon`, `url`, `sort_num`, `enabled`)
 (6, 'SD 绘画', '/images/menu/sd.png', '/sd', 2, 1),
 (7, '算力日志', '/images/menu/log.png', '/powerLog', 7, 1),
 (8, '应用中心', '/images/menu/app.png', '/apps', 6, 1),
-(9, '作品展示', '/images/menu/img-wall.png', '/images-wall', 4, 1),
-(10, '会员计划', '/images/menu/member.png', '/member', 8, 1),
-(11, '分享计划', '/images/menu/share.png', '/invite', 9, 1),
-(12, '思维导图', '/images/menu/xmind.png', '/xmind', 5, 1),
-(13, 'DALLE', '/images/menu/dalle.png', '/dalle', 3, 1),
-(14, '项目文档', '/images/menu/docs.png', 'https://ai.r9it.com/docs/', 11, 1),
-(15, '薯瓜AI官方论坛', '/images/menu/bbs.png', 'https://bbs.薯瓜AI.me/', 12, 1);
+(9, '作品展示', '/images/menu/img-wall.png', '/images-wall', 4, 1);
 
 -- --------------------------------------------------------
 
@@ -535,7 +539,7 @@ CREATE TABLE `chatgpt_users` (
 --
 
 INSERT INTO `chatgpt_users` (`id`, `username`, `nickname`, `password`, `avatar`, `salt`, `power`, `expired_time`, `status`, `chat_config_json`, `chat_roles_json`, `chat_models_json`, `last_login_at`, `vip`, `last_login_ip`, `created_at`, `updated_at`) VALUES
-(4, '18575670125', '薯瓜@534641', 'ccc3fb7ab61b8b5d096a4a166ae21d121fc38c71bbd1be6173d9ab973214a63b', 'http://localhost:5678/static/upload/2024/5/1715725189044438.png', 'ueedue5l', 1985, 1769416236, 1, '{\"api_keys\":{\"Azure\":\"\",\"ChatGLM\":\"\",\"OpenAI\":\"\"}}', '[\"elon_musk\",\"girl_friend\",\"lu_xun\",\"red_book\",\"psychiatrist\",\"translator\",\"weekly_report\",\"artist\",\"dou_yin\",\"english_trainer\",\"gpt\",\"kong_zi\",\"programmer\",\"seller\",\"steve_jobs\",\"teacher\"]', '[1]', 1715960703, 1, '::1', '2023-06-12 16:47:17', '2024-05-19 08:36:35'),
+(4, '18575670125', '薯瓜@534641', 'ccc3fb7ab61b8b5d096a4a166ae21d121fc38c71bbd1be6173d9ab973214a63b', '/images/user-info.jpg', 'ueedue5l', 1985, 2017292086, 1, '{\"api_keys\":{\"Azure\":\"\",\"ChatGLM\":\"\",\"OpenAI\":\"\"}}', '[\"elon_musk\",\"girl_friend\",\"lu_xun\",\"red_book\",\"psychiatrist\",\"translator\",\"weekly_report\",\"artist\",\"dou_yin\",\"english_trainer\",\"gpt\",\"kong_zi\",\"programmer\",\"seller\",\"steve_jobs\",\"teacher\"]', '[1]', 1715960703, 1, '::1', '2023-06-12 16:47:17', '2024-05-19 08:36:35'),
 (91, '18575670126', '薯瓜@623251', '5e4050b8dd403f593260395d9edeb9f273dbe92d15dfdd929c4a182e95da10c4', '/images/avatar/user.png', '6fj0otl8', 10, 0, 1, '{\"api_keys\":{\"Azure\":\"\",\"ChatGLM\":\"\",\"OpenAI\":\"\"}}', '[\"gpt\"]', '[1]', 1697184324, 0, '::1', '2023-10-13 16:01:56', '2024-01-05 21:28:38'),
 (97, '13888888888', '薯瓜@630521', 'c886771ae3fca0464aef3476c5368bb43feb758cc388cfb00f94ba38b1ded0f1', '/images/avatar/user.png', '35umf21c', 1099, 0, 1, '{\"api_keys\":{\"Azure\":\"\",\"ChatGLM\":\"\",\"OpenAI\":\"\"}}', '[\"gpt\"]', '[1]', 1711152776, 0, '::1', '2023-11-25 17:20:10', '2024-03-23 16:20:24'),
 (98, '13777777777', '薯瓜@900743', '03d4e5eefde1cba81b212247cb80aa89920a3f564cc71a266eb906f46b2bf697', '/images/avatar/user.png', 'cgk2aaen', 999, 0, 1, '{\"api_keys\":{\"Azure\":\"\",\"ChatGLM\":\"\",\"OpenAI\":\"\"}}', '[\"gpt\"]', '[1]', 0, 0, '', '2023-11-25 17:21:02', '2024-03-23 16:19:02'),
